@@ -69,6 +69,7 @@ def all_in_one():
     ax4.set_title('Project A', fontsize='x-small')
     ax4.set_xlim(0, 100)
     ax4.set_xticks(range(0, 101, 10))
+    ax4.set_ylim(0, 30)
 
     plt.tight_layout()
     plt.show()
