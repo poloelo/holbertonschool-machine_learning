@@ -157,7 +157,7 @@ class NeuralNetwork:
         costs = []
         for i in range(iterations + 1):
             A1, A2 = self.forward_prop(X)
-            if i % step == 0 or i == iterations:
+            if (verbose or graph) and (i % step == 0 or i == iterations):
                 cost = self.cost(Y, A2)
                 steps.append(i)
                 costs.append(cost)

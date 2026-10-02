@@ -122,7 +122,7 @@ class Neuron:
         costs = []
         for i in range(iterations + 1):
             A = self.forward_prop(X)
-            if i % step == 0 or i == iterations:
+            if (verbose or graph) and (i % step == 0 or i == iterations):
                 cost = self.cost(Y, A)
                 steps.append(i)
                 costs.append(cost)
